@@ -14,7 +14,7 @@
             :to="p.path"
           >
             <!-- Image element added here -->
-            <img :src="p.thumbnail" alt="Featured Image" class="featured-image"/>
+            <FeaturedImage :title="p.title" :thumbnail="p.thumbnail" />
             {{p.title}}
           </nuxt-link>
         </div>
