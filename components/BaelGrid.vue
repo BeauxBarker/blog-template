@@ -12,7 +12,9 @@
           <nuxt-link
             class="xs-text-center xs-flex xs-full-height xs-flex-align-center xs-flex-justify-center xs-text-center"
             :to="p.path"
-          >{{p.thumbnail}}{{p.title}}</nuxt-link>
+          >
+            <img v-lazy="p.thumbnail" :key="p.thumbnail" class="full-bg-image" />
+            {{p.title}}</nuxt-link>
         </div>
       </div>
     </div>
