@@ -12,7 +12,11 @@
           <nuxt-link
             class="xs-text-center xs-flex xs-full-height xs-flex-align-center xs-flex-justify-center xs-text-center"
             :to="p.path"
-          >{{p.title}}</nuxt-link>
+          >
+            <!-- Image element added here -->
+            <img :src="p.thumbnail" alt="Featured Image" class="featured-image"/>
+            {{p.title}}
+          </nuxt-link>
         </div>
       </div>
     </div>
@@ -50,5 +54,11 @@ export default {
 .bael-grid .intersected.bcg-item {
   opacity: 1;
   transition: 0.2s opacity ease-out;
+}
+/* Style for the featured image */
+.featured-image {
+  max-width: 100%; /* Adjust as needed */
+  height: auto; /* Adjust as needed */
+  margin-bottom: 1rem; /* Spacing between image and title */
 }
 </style>
